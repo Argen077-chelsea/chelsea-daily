@@ -1,0 +1,9 @@
+node_modules/
+renders/
+out/
+review/
+cache/
+index.html
+.env
+audio/*.mp3
+audio/*.wav

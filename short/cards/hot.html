@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th"><head><meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&display=block" rel="stylesheet" />
+<script src="cards/gsap.min.js"></script>
+<style>
+  html, body { margin: 0; background: #021a45; }
+  #root { position: relative; overflow: hidden; background: radial-gradient(120% 80% at 50% 35%, #0a4aa8 0%, #034694 35%, #021a45 85%); font-family: "Prompt", sans-serif; color: #fff; }
+  .sc { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+  .abs { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+  .tag { top: 300px; } .tag span { display: inline-block; background: #f2b705; color: #0b1a3a; font-weight: 800; font-size: 52px; line-height: 1.4; padding: 10px 44px; border-radius: 60px; }
+  .big { font-size: 170px; font-weight: 800; line-height: 1.4; padding: 10px 0; }
+  .mid { font-size: 96px; font-weight: 800; line-height: 1.4; padding: 6px 0; }
+  .small { font-size: 62px; font-weight: 500; line-height: 1.5; opacity: .85; }
+  .gold { color: #f2b705; }
+  .zero { position: absolute; left: 0; right: 0; top: 560px; text-align: center; font-size: 520px; font-weight: 800; line-height: 1.2; color: #f2b705; }
+  .chip { position: absolute; left: 110px; right: 110px; height: 170px; border-radius: 28px; display: flex; align-items: center; padding: 0 44px; box-sizing: border-box; font-size: 66px; font-weight: 800; line-height: 1.4; background: rgba(255,255,255,.16); }
+  .chip.pick { background: #f2b705; color: #0b1a3a; }
+  .chip .st { margin-left: auto; font-size: 46px; font-weight: 500; }
+  .vs { position: absolute; left: 0; right: 0; text-align: center; font-size: 110px; font-weight: 800; line-height: 1.3; color: #f2b705; }
+  .card { position: absolute; width: 340px; height: 380px; border-radius: 32px; background: rgba(2,26,69,.78); border: 4px solid rgba(255,255,255,.25); text-align: center; font-size: 64px; font-weight: 800; line-height: 1.4; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .src { position: absolute; left: 0; right: 0; top: 1330px; text-align: center; font-size: 42px; font-weight: 500; opacity: .75; line-height: 1.5; }
+</style></head>
+<body>
+<div id="root" data-composition-id="hot" data-start="0" data-width="1080" data-height="1920" data-duration="18.9" data-at="22.3">
+
+  <!-- A 0–3.8 : ฝั่งทีมชาย -->
+  <div class="sc" id="A">
+    <div class="abs tag a"><span>ทีมชาย · ตลาดนักเตะ</span></div>
+    <div class="abs mid a" style="top:650px">อนาคตของ</div>
+    <div class="abs big gold a" style="top:800px; font-size:210px">มาโล กุสโต</div>
+    <div class="abs small a" style="top:1090px">รายงานจาก Sky Sports</div>
+  </div>
+
+  <!-- B 3.8–9.0 : 0 ตัวจริง -->
+  <div class="sc" id="B">
+    <div class="abs tag b"><span>พรีเมียร์ลีก</span></div>
+    <div class="zero" id="z">0</div>
+    <div class="abs mid b" style="top:1130px">ตัวจริงในลีก</div>
+    <div class="abs big gold b" style="top:1270px; font-size:110px">นาน 2 เดือนเต็ม</div>
+  </div>
+
+  <!-- C 9.0–14.4 : แบ็กขวา -->
+  <div class="sc" id="C">
+    <div class="abs tag c"><span>ชาบี เลือกใคร?</span></div>
+    <div class="chip pick" id="c1" style="top:620px"><span>จอช อาเชียมปง</span><span class="st">ตัวจริง</span></div>
+    <div class="chip pick" id="c2" style="top:820px"><span>มาร์โก ปาเลสตรา</span><span class="st">ตัวจริง</span></div>
+    <div class="chip" id="c3" style="top:1020px; opacity:.55"><span>มาโล กุสโต</span><span class="st">ม้านั่ง</span></div>
+    <div class="abs small c" style="top:1260px">แม้ รีซ เจมส์ บาดเจ็บอยู่</div>
+  </div>
+
+  <!-- D 14.4–20 : บาตูรินา -->
+  <div class="sc" id="D">
+    <div class="abs tag d"><span>ข่าวลือ</span></div>
+    <div class="abs mid d" style="top:590px">มาร์ติน บาตูรินา</div>
+    <div class="abs big gold d" id="eur" style="top:740px; font-size:230px">80M€</div>
+    <div class="card" id="k1" style="left:70px; top:1020px"><span style="color:#6cabdd">เชลซี</span></div>
+    <div class="vs" id="vs" style="top:1130px">VS</div>
+    <div class="card" id="k2" style="right:70px; top:1020px"><span style="color:#ff5d5d">แมนฯ ยู</span></div>
+    <div class="src" id="srcd" data-legal>The Hard Tackle รายงาน</div>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const tl = gsap.timeline({ paused: true });
+const DUR = 18.9;
+const SC = { A: [0, 5.3], B: [5.3, 10.3], C: [10.3, 13.9], D: [13.9, 18.9] };
+for (const k in SC) {
+  const [a, b] = SC[k], el = $(k);
+  gsap.set(el, { autoAlpha: 0 });
+  tl.set(el, { autoAlpha: 1 }, a);
+  const kids = el.querySelectorAll("." + k.toLowerCase());
+  if (kids.length) tl.from(kids, { y: 90, opacity: 0, scale: 0.92, duration: 0.55, ease: "expo.out", stagger: 0.12 }, a + 0.02);
+  if (b < DUR) tl.to(el, { autoAlpha: 0, y: -60, duration: 0.25, ease: "expo.in" }, b - 0.25);
+  tl.set(el, { y: 0 }, b + 0.01);
+}
+tl.to("#A .big", { y: -14, duration: 4.5, ease: "none" }, 0.6);
+// B: เลข 0 กระแทกเข้ามา แล้วสั่นเบาๆ
+tl.fromTo("#z", { scale: 2.2, opacity: 0, filter: "blur(30px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 5.5);
+tl.to("#z", { scale: 1.06, duration: 4.2, ease: "none" }, 6.1);
+// C: ชิปตัวจริงเข้าก่อน กุสโตตามหลัง จางลง
+gsap.set(["#c1", "#c2", "#c3"], { opacity: 0, x: -120 });
+tl.to("#c1", { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 10.5);
+tl.to("#c2", { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 11.0);
+tl.to("#c3", { opacity: 0.55, x: 0, duration: 0.5, ease: "expo.out" }, 11.8);
+tl.to("#c3", { x: 14, duration: 0.08, yoyo: true, repeat: 5, ease: "none" }, 12.4);
+// D: ตัวเลขนับขึ้น 0→80 แล้ว VS ชนกัน
+const e = { v: 0 };
+tl.to(e, { v: 80, duration: 1.0, ease: "power2.out", onUpdate: () => { $("eur").textContent = Math.round(e.v) + "M€"; } }, 14.1);
+gsap.set("#k1", { x: -600, opacity: 0 }); gsap.set("#k2", { x: 600, opacity: 0 }); gsap.set("#vs", { opacity: 0, scale: 0.3 }); gsap.set("#srcd", { opacity: 0 });
+tl.to("#k1", { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 15.3);
+tl.to("#k2", { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 15.5);
+tl.to("#vs", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, 17.0);
+tl.to("#srcd", { opacity: 0.75, duration: 0.5, ease: "expo.out" }, 17.5);
+tl.to("#vs", { scale: 1.12, duration: 1.8, ease: "none" }, 17.1);
+tl.set({}, {}, 18.9);
+window.__timelines["hot"] = tl;
+</script></body></html>

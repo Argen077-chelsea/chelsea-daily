@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th"><head><meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&display=block" rel="stylesheet" />
+<script src="cards/gsap.min.js"></script>
+<style>
+  html, body { margin: 0; background: #021a45; }
+  #root { position: relative; overflow: hidden; background: radial-gradient(120% 80% at 50% 35%, #0a4aa8 0%, #034694 35%, #021a45 85%); font-family: "Prompt", sans-serif; color: #fff; }
+  .sc { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+  .abs { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+  .tag { top: 300px; } .tag span { display: inline-block; background: #f2b705; color: #0b1a3a; font-weight: 800; font-size: 52px; line-height: 1.4; padding: 10px 44px; border-radius: 60px; }
+  .big { font-size: 170px; font-weight: 800; line-height: 1.4; padding: 10px 0; }
+  .mid { font-size: 96px; font-weight: 800; line-height: 1.4; padding: 6px 0; }
+  .small { font-size: 62px; font-weight: 500; line-height: 1.5; opacity: .85; }
+  .gold { color: #f2b705; }
+  .score { position: absolute; left: 70px; right: 70px; top: 620px; height: 420px; background: rgba(2,26,69,.75); border: 4px solid rgba(255,255,255,.25); border-radius: 36px; }
+  .team { position: absolute; top: 40px; width: 360px; text-align: center; font-size: 52px; font-weight: 800; line-height: 1.4; }
+  .crest { position: absolute; top: 120px; width: 150px; height: 150px; border-radius: 50%; margin-left: 105px; display: flex; align-items: center; justify-content: center; font-size: 64px; font-weight: 800; }
+  .num { position: absolute; top: 90px; width: 200px; text-align: center; font-size: 270px; font-weight: 800; line-height: 1.2; }
+  .dash { position: absolute; left: 0; right: 0; top: 110px; text-align: center; font-size: 150px; font-weight: 800; line-height: 1.2; opacity: .6; }
+  .min { position: absolute; left: 0; right: 0; top: 880px; text-align: center; font-size: 300px; font-weight: 800; line-height: 1.3; color: #f2b705; }
+  .row { position: absolute; left: 90px; right: 90px; height: 170px; border-radius: 28px; display: flex; align-items: center; padding: 0 40px; box-sizing: border-box; font-size: 60px; font-weight: 800; line-height: 1.4; }
+  .row .p { margin-left: auto; font-size: 80px; }
+  .row .r { width: 90px; font-size: 80px; }
+  .ball { position: absolute; width: 36px; height: 36px; border-radius: 50%; background: #fff; box-shadow: 0 0 40px 10px rgba(255,255,255,.6); }
+</style></head>
+<body>
+<div id="root" data-composition-id="news" data-start="0" data-width="1080" data-height="1920" data-duration="14.1" data-at="8.2">
+
+  <!-- A 0–3.6 : หัวข้อ -->
+  <div class="sc" id="A">
+    <div class="abs tag a"><span>WSL · ทีมหญิง</span></div>
+    <div class="abs mid a" style="top:620px">เชลซี หญิง</div>
+    <div class="abs big gold a" style="top:760px; font-size:190px">เปิดบ้าน<br>ชนซิตี้</div>
+    <div class="abs small a" style="top:1130px">สแตมฟอร์ด บริดจ์</div>
+  </div>
+
+  <!-- B 3.6–9.2 : สกอร์บอร์ด -->
+  <div class="sc" id="B">
+    <div class="abs tag b"><span>FULL TIME</span></div>
+    <div class="score b">
+      <div class="team" style="left:20px">CHELSEA</div>
+      <div class="team" style="right:20px">MAN CITY</div>
+      <div class="num" id="n1" style="left:160px">0</div>
+      <div class="dash">-</div>
+      <div class="num" id="n2" style="right:160px; opacity:.55">0</div>
+    </div>
+    <div class="abs mid b gold" id="bw" style="top:1140px">ชนะ 1-0!</div>
+  </div>
+
+  <!-- C 9.2–13.4 : ประตู -->
+  <div class="sc" id="C">
+    <div class="abs tag c"><span>ประตูชัย</span></div>
+    <div class="abs mid c" style="top:560px">แซนดี บัลติมอร์</div>
+    <div class="min c" id="mn">0'</div>
+    <div class="abs small c" style="top:1230px">ช่วงทดเจ็บครึ่งแรก</div>
+  </div>
+
+  <!-- D 13.4–16.6 : พ่ายแพ้นัดแรก -->
+  <div class="sc" id="D">
+    <div class="abs mid d" style="top:640px">ซิตี้ แพ้</div>
+    <div class="abs big gold d" style="top:800px; font-size:210px">นัดแรก</div>
+    <div class="abs small d" style="top:1100px">ของซีซัน WSL</div>
+  </div>
+
+  <!-- E 16.6–20 : ตาราง -->
+  <div class="sc" id="E">
+    <div class="abs tag e"><span>ตาราง WSL</span></div>
+    <div class="row" id="rA" style="top:640px; background:#f2b705; color:#0b1a3a"><span class="r">1</span>เชลซี<span class="p">+1</span></div>
+    <div class="row" id="rB" style="top:830px; background:rgba(255,255,255,.14)"><span class="r">2</span>แมนฯ ซิตี้</div>
+    <div class="abs big gold e" style="top:1100px; font-size:150px">แซงขึ้นจ่าฝูง</div>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const tl = gsap.timeline({ paused: true });
+const DUR = 14.1;
+const SC = { A: [0, 2.65], B: [2.65, 4.6], C: [4.6, 8.95], D: [8.95, 12.0], E: [12.0, 14.1] };
+for (const k in SC) {
+  const [a, b] = SC[k], el = $(k);
+  gsap.set(el, { autoAlpha: 0 });
+  tl.set(el, { autoAlpha: 1 }, a);
+  const kids = el.querySelectorAll("." + k.toLowerCase());
+  if (kids.length) tl.from(kids, { y: 90, opacity: 0, scale: 0.92, duration: 0.55, ease: "expo.out", stagger: 0.12 }, a + 0.02);
+  if (b < DUR) tl.to(el, { autoAlpha: 0, y: -60, duration: 0.25, ease: "expo.in" }, b - 0.25);
+  tl.set(el, { y: 0 }, b + 0.01);
+}
+// A: ลอยช้า
+tl.to("#A .big", { y: -14, duration: 2, ease: "none" }, 0.4);
+// B: สกอร์ 0→1 ลงจังหวะที่ 5.4 วินาที (ของการ์ด)
+const o = { v: 0 };
+tl.to(o, { v: 1, duration: 0.01, onUpdate: () => { $("n1").textContent = o.v >= 0.5 ? "1" : "0"; } }, 3.6);
+tl.fromTo("#n1", { scale: 1 }, { scale: 1.45, duration: 0.18, ease: "expo.out", yoyo: true, repeat: 1, transformOrigin: "50% 50%" }, 3.6);
+tl.from("#bw", { opacity: 0, scale: 0.6, duration: 0.5, ease: "expo.out" }, 3.95);
+// C: นาทีวิ่ง 0→45+4
+const m = { v: 0 };
+tl.to(m, { v: 45, duration: 2.0, ease: "power2.out", onUpdate: () => { $("mn").textContent = Math.round(m.v) + "'"; } }, 4.8);
+tl.to(m, { v: 46, duration: 0.01, onUpdate: () => { if (m.v >= 45.5) $("mn").textContent = "45+4'"; } }, 7.5);
+tl.fromTo("#mn", { scale: 1 }, { scale: 1.12, duration: 0.2, ease: "expo.out", yoyo: true, repeat: 1 }, 7.5);
+// E: จ่าฝูง — สลับอันดับ: ซิตี้ลงมาอยู่แถว 2, เชลซีขึ้นแถว 1
+gsap.set("#rA", { y: 190, opacity: 0 }); gsap.set("#rB", { y: -190, opacity: 0 });
+tl.to(["#rA", "#rB"], { opacity: 1, duration: 0.4, ease: "expo.out" }, 12.15);
+tl.to("#rA", { y: 0, duration: 0.7, ease: "power2.inOut" }, 12.9);
+tl.to("#rB", { y: 0, duration: 0.7, ease: "power2.inOut" }, 12.9);
+tl.set({}, {}, 14.1);
+window.__timelines["news"] = tl;
+</script></body></html>

@@ -1,0 +1,188 @@
+{
+ "title": "Chelsea Shorts 2026-11-15",
+ "aspect": "9:16",
+ "vo": "audio/vo2.mp3",
+ "music": {
+  "src": ""
+ },
+ "cuts_ok": [],
+ "beats": [
+  {
+   "card": "cards/hook.html",
+   "render": "renders/hook.mp4",
+   "at": 0,
+   "duration": 8.2,
+   "why": "ฮุก",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 0
+     },
+     {
+      "role": "snap",
+      "at": 0.4
+     },
+     {
+      "role": "whoosh",
+      "at": 2.16
+     },
+     {
+      "role": "whoosh",
+      "at": 4.2
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/news.html",
+   "render": "renders/news.mp4",
+   "at": 8.2,
+   "duration": 14.1,
+   "why": "ข่าวทีมหญิง",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 8.2
+     },
+     {
+      "role": "whoosh",
+      "at": 10.85
+     },
+     {
+      "role": "ding",
+      "at": 11.8,
+      "volume_db": -6
+     },
+     {
+      "role": "whoosh",
+      "at": 12.8
+     },
+     {
+      "role": "snap",
+      "at": 15.7,
+      "volume_db": -4
+     },
+     {
+      "role": "whoosh",
+      "at": 17.15
+     },
+     {
+      "role": "whoosh",
+      "at": 20.2
+     },
+     {
+      "role": "flip",
+      "at": 21.1
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/hot.html",
+   "render": "renders/hot.mp4",
+   "at": 22.3,
+   "duration": 18.9,
+   "why": "กุสโต+บาตูรินา",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 22.3
+     },
+     {
+      "role": "whoosh",
+      "at": 27.6
+     },
+     {
+      "role": "tapestop",
+      "at": 27.8,
+      "volume_db": -8
+     },
+     {
+      "role": "whoosh",
+      "at": 32.6
+     },
+     {
+      "role": "click",
+      "at": 32.8
+     },
+     {
+      "role": "click",
+      "at": 33.3
+     },
+     {
+      "role": "click",
+      "at": 34.1
+     },
+     {
+      "role": "whoosh",
+      "at": 36.2
+     },
+     {
+      "role": "click",
+      "at": 37.6
+     },
+     {
+      "role": "snap",
+      "at": 39.3,
+      "volume_db": -4
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/cta.html",
+   "render": "renders/cta.mp4",
+   "at": 41.2,
+   "duration": 18.8,
+   "why": "วิเคราะห์+CTA",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 41.2
+     },
+     {
+      "role": "click",
+      "at": 42.75
+     },
+     {
+      "role": "click",
+      "at": 44.3
+     },
+     {
+      "role": "click",
+      "at": 46.6
+     },
+     {
+      "role": "whoosh",
+      "at": 48.7
+     },
+     {
+      "role": "click",
+      "at": 49.2
+     },
+     {
+      "role": "click",
+      "at": 49.5
+     },
+     {
+      "role": "whoosh",
+      "at": 52.5
+     },
+     {
+      "role": "ding",
+      "at": 52.9,
+      "volume_db": -6
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "click": {
+  "file": "click.mp3",
+  "alts": [],
+  "volume_db": 0,
+  "use": "a cursor/finger click on a UI button"
+ },
+ "type": {
+  "file": "type.mp3",
+  "alts": [
+   "type-0.5.mp3",
+   "type-1.1.mp3"
+  ],
+  "volume_db": -12,
+  "use": "ตัวหนังสือพิมพ์ขึ้น — เลือกความยาว: type-0.5.mp3 · type.mp3 (0.9 วิ) · type-1.1.mp3 (ใช้ \"alt\")"
+ },
+ "ding": {
+  "file": "ding.mp3",
+  "alts": [],
+  "volume_db": -10.0,
+  "use": "a message / notification arrives"
+ },
+ "kaching": {
+  "file": "kaching.mp3",
+  "alts": [],
+  "volume_db": -4,
+  "use": "money, price, paid"
+ },
+ "whoosh": {
+  "file": "whoosh.mp3",
+  "alts": [],
+  "volume_db": -15,
+  "use": "a big move / shot change"
+ },
+ "snap": {
+  "file": "snap.mp3",
+  "alts": [],
+  "volume_db": 0,
+  "use": "a finger snap with a room tail — 'look'"
+ },
+ "tapestop": {
+  "file": "tapestop.mp3",
+  "alts": [],
+  "volume_db": -9,
+  "use": "the world stops (a warning, a freeze)"
+ },
+ "flip": {
+  "file": "flip.mp3",
+  "alts": [],
+  "volume_db": -10.0,
+  "use": "a card / page flips"
+ },
+ "deal": {
+  "file": "deal.mp3",
+  "alts": [],
+  "volume_db": -11,
+  "use": "cards dealt out one by one"
+ },
+ "split": {
+  "file": "split.mp3",
+  "alts": [],
+  "volume_db": -9,
+  "use": "one thing splits into many"
+ },
+ "toggle": {
+  "file": "toggle.mp3",
+  "alts": [],
+  "volume_db": -11,
+  "use": "a switch / a state flips on"
+ }
+}
