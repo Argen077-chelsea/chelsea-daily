@@ -1,1 +1,1 @@
-{ "name": "chelsea-daily", "private": true, "dependencies": { "gsap": "3.12.5" } }
+{"name":"chelsea-daily","private":true,"dependencies":{"@fontsource/prompt":"^5.3.0","gsap":"3.12.5","hyperframes":"^0.6.45"}}
