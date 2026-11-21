@@ -1,0 +1,122 @@
+{
+ "audio_seconds": 206.28,
+ "speech": [
+  0.18,
+  205.96
+ ],
+ "paragraphs": [
+  {
+   "start": 0.18,
+   "end": 21.83,
+   "seconds": 21.65,
+   "expected_seconds": 21.63
+  },
+  {
+   "start": 22.36,
+   "end": 69.19,
+   "seconds": 46.83,
+   "expected_seconds": 48.02
+  },
+  {
+   "start": 69.69,
+   "end": 96.0,
+   "seconds": 26.31,
+   "expected_seconds": 28.02
+  },
+  {
+   "start": 96.54,
+   "end": 118.93,
+   "seconds": 22.39,
+   "expected_seconds": 19.76
+  },
+  {
+   "start": 119.56,
+   "end": 159.97,
+   "seconds": 40.41,
+   "expected_seconds": 43.25
+  },
+  {
+   "start": 160.48,
+   "end": 189.85,
+   "seconds": 29.37,
+   "expected_seconds": 26.28
+  },
+  {
+   "start": 190.91,
+   "end": 205.96,
+   "seconds": 15.05,
+   "expected_seconds": 18.83
+  }
+ ],
+ "scenes": {
+  "i1": 0.18,
+  "i2": 6.22,
+  "i3a": 11.92,
+  "i3b": 15.44,
+  "i3c": 16.94,
+  "l1a": 22.36,
+  "l1b": 29.29,
+  "l2a": 30.11,
+  "l2b": 35.51,
+  "l2c": 39.0,
+  "l3a": 48.51,
+  "l3b": 54.65,
+  "l3c": 58.76,
+  "l4": 63.94,
+  "o1a": 69.69,
+  "o1b": 74.17,
+  "o1c": 77.7,
+  "o2": 82.78,
+  "o3": 89.6,
+  "w1a": 96.54,
+  "w1b": 101.24,
+  "w2a": 104.83,
+  "w2b": 109.67,
+  "w2c": 114.6,
+  "f1a": 119.56,
+  "f1b": 127.2,
+  "f2a": 131.68,
+  "f2b": 142.9,
+  "f3a": 147.01,
+  "f3b": 154.0,
+  "m1a": 160.48,
+  "m1b": 171.22,
+  "m1c": 174.04,
+  "m2": 179.23,
+  "c1": 190.91,
+  "c2": 193.59,
+  "c3": 200.84
+ },
+ "ambiguous_breaks": [
+  {
+   "paragraph": 2,
+   "chosen": [
+    21.83,
+    22.36
+   ],
+   "alternatives": [
+    [
+     24.65,
+     25.51
+    ]
+   ]
+  },
+  {
+   "paragraph": 3,
+   "chosen": [
+    69.19,
+    69.69
+   ],
+   "alternatives": [
+    [
+     71.75,
+     72.33
+    ]
+   ]
+  }
+ ],
+ "warnings": [
+  "break before paragraph 2 is ambiguous: chose [21.83, 22.36] but [[24.65, 25.51]] look just as likely — confirm with the user or set \"start\" for that paragraph",
+  "break before paragraph 3 is ambiguous: chose [69.19, 69.69] but [[71.75, 72.33]] look just as likely — confirm with the user or set \"start\" for that paragraph"
+ ]
+}

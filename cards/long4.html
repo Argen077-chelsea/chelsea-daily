@@ -1,0 +1,61 @@
+<!doctype html><html lang="th"><head><meta charset="UTF-8"/><meta name="viewport" content="width=1920, height=1080"/>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&display=block" rel="stylesheet"/>
+<script src="cards/gsap.min.js"></script><style>
+html,body{margin:0;background:#021a45}
+#root{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 50% 40%,#0a4aa8 0%,#034694 38%,#021a45 88%);font-family:"Prompt",sans-serif;color:#fff}
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.a{position:absolute;white-space:nowrap}
+.c{left:0;right:0;text-align:center}
+.tag{left:120px;top:80px}.tag span,.pill span{display:inline-block;background:#f2b705;color:#0b1a3a;font-weight:800;font-size:44px;line-height:1.4;padding:8px 40px;border-radius:60px}
+.pill{left:0;right:0;text-align:center}
+.h1{font-size:150px;font-weight:800;line-height:1.4;padding:8px 0}
+.h2{font-size:92px;font-weight:800;line-height:1.4;padding:6px 0}
+.h3{font-size:66px;font-weight:800;line-height:1.4;padding:4px 0}
+.p{font-size:54px;font-weight:500;line-height:1.5;opacity:.88}
+.g{color:#f2b705}.bl{color:#6cabdd}.rd{color:#ff5d5d}
+.panel{background:rgba(2,26,69,.78);border:4px solid rgba(255,255,255,.25);border-radius:32px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;line-height:1.4}
+.row{height:140px;border-radius:26px;display:flex;align-items:center;padding:0 44px;box-sizing:border-box;font-size:58px;font-weight:800;line-height:1.4;background:rgba(255,255,255,.16)}
+.row.hl{background:#f2b705;color:#0b1a3a}.row .r{width:90px}.row .st{margin-left:auto;font-size:44px;font-weight:500}
+.big{font-weight:800;line-height:1.2;color:#f2b705}
+.stripe{position:absolute;left:-200px;width:2400px;height:110px;background:rgba(255,255,255,.05);transform:rotate(-8deg)}
+</style></head><body>
+<div id="root" data-composition-id="long4" data-start="0" data-width="1920" data-height="1080" data-duration="23.02" data-at="96.54">
+<div id="bgs" data-deco><div class="stripe" style="top:160px"></div><div class="stripe" style="top:760px"></div></div>
+<div class="sc" id="w1"><div class="a tag" data-d="0"><span>ชาบี อลอนโซ</span></div><div class="a c h2" style="top:260px" data-d="0.3" >เชลซีกำลัง</div><div class="a c h1 g" style="top:380px;font-size:120px" data-d="0.8" >สร้างเอกลักษณ์ของทีม</div><div class="a c h2" style="top:620px" data-d="4.7" >และต้องการความสม่ำเสมอ</div></div>
+<div class="sc" id="w2a"><div class="a tag" data-d="0"><span>ระวังลีดส์!</span></div><div class="a c h1 g" style="top:260px;font-size:150px" data-d="0.3" >ลีดส์ ยูไนเต็ด</div><div class="a c h2" style="top:470px" data-d="1.2" >แข็งแกร่งทั้งร่างกาย</div><div class="a c h2" style="top:610px" data-d="2.6" >และแท็กติก</div></div>
+<div class="sc" id="w2b"><div class="a tag" data-d="0"><span>สถิติลีดส์</span></div><div class="a c big" style="top:170px;font-size:420px" data-d=".3" data-count="0|8|1.6|||.5">0</div><div class="a c h2" style="top:640px" data-d="0.9" >ประตูที่เสีย</div><div class="a c p" style="top:790px" data-d="1.4" >จาก 10 นัดแรกของฤดูกาล</div><div class="a pill" style="top:900px" data-d="5.13"><span>ไม่ใช่งานง่าย!</span></div></div>
+</div><script>
+const SCENES=[{"k": "w1", "t0": 0.0, "t1": 8.29, "last": false}, {"k": "w2a", "t0": 8.29, "t1": 13.13, "last": false}, {"k": "w2b", "t0": 13.13, "t1": 23.02, "last": true}];const DUR=23.02;const ID="long4";
+
+const $=s=>document.querySelector(s);
+const tl=gsap.timeline({paused:true});
+SCENES.forEach((S,i)=>{
+  const el=document.getElementById(S.k); gsap.set(el,{autoAlpha:0});
+  tl.set(el,{autoAlpha:1},S.t0);
+  el.querySelectorAll('[data-d]').forEach(x=>{
+    tl.from(x,{opacity:0,y:50,scale:.94,duration:.55,ease:'expo.out'},S.t0+parseFloat(x.dataset.d));
+  });
+  el.querySelectorAll('[data-count]').forEach(x=>{
+    const [f,t,d,pre,suf,at]=x.dataset.count.split('|'); const o={v:+f}; x.textContent=pre+Math.round(+f).toLocaleString('en-US')+suf;
+    tl.to(o,{v:+t,duration:+d,ease:'power2.out',onUpdate:()=>{x.textContent=pre+Math.round(o.v).toLocaleString('en-US')+suf}},S.t0+parseFloat(at));
+  });
+  el.querySelectorAll('[data-sw]').forEach(x=>{
+    const [nt,d]=x.dataset.sw.split('|'); const old=x.textContent; const o={v:0};
+    tl.to(o,{v:1,duration:.01,onUpdate:()=>{x.textContent=o.v>=.5?nt:old}},S.t0+parseFloat(d));
+    tl.fromTo(x,{scale:1},{scale:1.35,duration:.18,yoyo:true,repeat:1,ease:'expo.out'},S.t0+parseFloat(d));
+  });
+  el.querySelectorAll('[data-swap]').forEach(x=>{
+    const [dy,d]=x.dataset.swap.split('|'); gsap.set(x,{y:+dy});
+    tl.to(x,{y:0,duration:.7,ease:'power2.inOut'},S.t0+parseFloat(d));
+  });
+  el.querySelectorAll('[data-pulse]').forEach(x=>{
+    const [d,n]=x.dataset.pulse.split('|');
+    tl.to(x,{scale:1.06,duration:.45,ease:'power2.inOut',yoyo:true,repeat:+n},S.t0+parseFloat(d));
+  });
+  el.querySelectorAll('.fl').forEach(x=>{tl.to(x,{y:'-=14',duration:Math.max(1,S.t1-S.t0-.8),ease:'none'},S.t0+.6)});
+  if(!S.last){tl.to(el,{autoAlpha:0,y:-50,duration:.25,ease:'expo.in'},S.t1-.25); tl.set(el,{y:0},S.t1+.01)}
+});
+tl.fromTo('#bgs',{x:-60},{x:60,duration:DUR,ease:'none'},0);
+tl.set({},{},DUR);
+window.__timelines[ID]=tl;
+</script></body></html>
