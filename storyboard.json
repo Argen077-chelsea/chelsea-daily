@@ -1,0 +1,191 @@
+{
+ "title": "Chelsea Long 2026-11-21",
+ "aspect": "16:9",
+ "vo": "audio/vo.wav",
+ "music": {
+  "src": ""
+ },
+ "cuts_ok": [
+  48.53,
+  201.0
+ ],
+ "beats": [
+  {
+   "card": "cards/long1.html",
+   "render": "renders/long1.mp4",
+   "at": 0,
+   "duration": 22.36,
+   "why": "เปิดคลิป",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 0.05
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/long2.html",
+   "render": "renders/long2.mp4",
+   "at": 22.36,
+   "duration": 47.33,
+   "why": "ความพร้อมก่อนชนลีดส์",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 22.4
+     },
+     {
+      "role": "snap",
+      "at": 23.16
+     },
+     {
+      "role": "whoosh",
+      "at": 35.5
+     },
+     {
+      "role": "ding",
+      "at": 55.2
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/long3.html",
+   "render": "renders/long3.mp4",
+   "at": 69.69,
+   "duration": 26.85,
+   "why": "ผู้ที่ยังพัก",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 69.75
+     },
+     {
+      "role": "whoosh",
+      "at": 82.8
+     },
+     {
+      "role": "whoosh",
+      "at": 89.6
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/long4.html",
+   "render": "renders/long4.mp4",
+   "at": 96.54,
+   "duration": 23.02,
+   "why": "คำเตือนเรื่องลีดส์",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 96.6
+     },
+     {
+      "role": "whoosh",
+      "at": 104.8
+     },
+     {
+      "role": "whoosh",
+      "at": 109.7
+     },
+     {
+      "role": "ding",
+      "at": 111.6
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/long5.html",
+   "render": "renders/long5.mp4",
+   "at": 119.56,
+   "duration": 40.92,
+   "why": "เอฟเอปรับเงิน",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 119.6
+     },
+     {
+      "role": "kaching",
+      "at": 122.86,
+      "volume_db": 1
+     },
+     {
+      "role": "whoosh",
+      "at": 131.7
+     },
+     {
+      "role": "whoosh",
+      "at": 147.0
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/long6.html",
+   "render": "renders/long6.mp4",
+   "at": 160.48,
+   "duration": 30.43,
+   "why": "ทีมหญิง",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 160.5
+     },
+     {
+      "role": "whoosh",
+      "at": 171.2
+     },
+     {
+      "role": "snap",
+      "at": 171.9
+     },
+     {
+      "role": "whoosh",
+      "at": 179.2
+     }
+    ]
+   }
+  },
+  {
+   "card": "cards/long7.html",
+   "render": "renders/long7.mp4",
+   "at": 190.91,
+   "duration": 17.35,
+   "why": "ปิดคลิป",
+   "sound": {
+    "music": "ไม่มี",
+    "sfx": [
+     {
+      "role": "whoosh",
+      "at": 190.95
+     },
+     {
+      "role": "whoosh",
+      "at": 193.6
+     },
+     {
+      "role": "whoosh",
+      "at": 200.84
+     }
+    ]
+   }
+  }
+ ]
+}

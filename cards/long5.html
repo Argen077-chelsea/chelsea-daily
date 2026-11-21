@@ -1,0 +1,61 @@
+<!doctype html><html lang="th"><head><meta charset="UTF-8"/><meta name="viewport" content="width=1920, height=1080"/>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&display=block" rel="stylesheet"/>
+<script src="cards/gsap.min.js"></script><style>
+html,body{margin:0;background:#021a45}
+#root{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 50% 40%,#0a4aa8 0%,#034694 38%,#021a45 88%);font-family:"Prompt",sans-serif;color:#fff}
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.a{position:absolute;white-space:nowrap}
+.c{left:0;right:0;text-align:center}
+.tag{left:120px;top:80px}.tag span,.pill span{display:inline-block;background:#f2b705;color:#0b1a3a;font-weight:800;font-size:44px;line-height:1.4;padding:8px 40px;border-radius:60px}
+.pill{left:0;right:0;text-align:center}
+.h1{font-size:150px;font-weight:800;line-height:1.4;padding:8px 0}
+.h2{font-size:92px;font-weight:800;line-height:1.4;padding:6px 0}
+.h3{font-size:66px;font-weight:800;line-height:1.4;padding:4px 0}
+.p{font-size:54px;font-weight:500;line-height:1.5;opacity:.88}
+.g{color:#f2b705}.bl{color:#6cabdd}.rd{color:#ff5d5d}
+.panel{background:rgba(2,26,69,.78);border:4px solid rgba(255,255,255,.25);border-radius:32px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;line-height:1.4}
+.row{height:140px;border-radius:26px;display:flex;align-items:center;padding:0 44px;box-sizing:border-box;font-size:58px;font-weight:800;line-height:1.4;background:rgba(255,255,255,.16)}
+.row.hl{background:#f2b705;color:#0b1a3a}.row .r{width:90px}.row .st{margin-left:auto;font-size:44px;font-weight:500}
+.big{font-weight:800;line-height:1.2;color:#f2b705}
+.stripe{position:absolute;left:-200px;width:2400px;height:110px;background:rgba(255,255,255,.05);transform:rotate(-8deg)}
+</style></head><body>
+<div id="root" data-composition-id="long5" data-start="0" data-width="1920" data-height="1080" data-duration="40.92" data-at="119.56">
+<div id="bgs" data-deco><div class="stripe" style="top:160px"></div><div class="stripe" style="top:760px"></div></div>
+<div class="sc" id="f1"><div class="a tag" data-d="0"><span>ข่าวสโมสร · เอฟเอ</span></div><div class="a c h2" style="top:200px" data-d="0.3" >เอฟเอปรับเชลซี</div><div class="a c big" style="top:330px;font-size:250px" data-d="1.4" data-count="0|150000|2.0|£||1.5">£0</div><div class="a c p" style="top:660px" data-d="4.0" >ยืนยันบทลงโทษ 20 พ.ย.</div><div class="a c h3 g" style="top:790px" data-d="7.64" >+ แผนปฏิบัติการ + คำเตือน</div></div>
+<div class="sc" id="f2"><div class="a tag" data-d="0"><span>ต้นเหตุ</span></div><div class="a panel " style="left:260px;top:200px;width:1400px;height:170px;font-size:66px;" data-d="0.4"><span class="g">10 ม.ค. 2026</span><span style="margin:0 30px;opacity:.5">·</span>เอฟเอ คัพ</div><div class="a c h3" style="top:420px" data-d="1.4" >เยือนชาร์ลตัน แอธเลติก</div><div class="a c h3 g" style="top:560px" data-d="3.0" >แฟนบอลร้องเพลงเหยียดศาสนา/ไม่เหมาะสม</div><div class="a panel " style="left:260px;top:730px;width:1400px;height:200px;font-size:66px;" data-d="11.22"><span>อุทธรณ์ของสโมสร</span><span class="rd" style="margin-left:40px">ถูกปัดตก</span></div></div>
+<div class="sc" id="f3"><div class="a tag" data-d="0"><span>แถลงการณ์เชลซี</span></div><div class="a c h1 g" style="top:220px;font-size:170px" data-d="0.3" >Zero-tolerance</div><div class="a c h3" style="top:470px" data-d="1.6" >ประณามการเหยียดและแบ่งแยกทุกรูปแบบ</div><div class="a panel " style="left:260px;top:650px;width:1400px;height:250px;font-size:50px;" data-d="6.99"><div><div class="h3">แบน + ให้ความรู้ผู้กระทำผิด</div><div class="p g">ร่วมกับโครงการ Kick It Out</div></div></div></div>
+</div><script>
+const SCENES=[{"k": "f1", "t0": 0.0, "t1": 12.12, "last": false}, {"k": "f2", "t0": 12.12, "t1": 27.45, "last": false}, {"k": "f3", "t0": 27.45, "t1": 40.92, "last": true}];const DUR=40.92;const ID="long5";
+
+const $=s=>document.querySelector(s);
+const tl=gsap.timeline({paused:true});
+SCENES.forEach((S,i)=>{
+  const el=document.getElementById(S.k); gsap.set(el,{autoAlpha:0});
+  tl.set(el,{autoAlpha:1},S.t0);
+  el.querySelectorAll('[data-d]').forEach(x=>{
+    tl.from(x,{opacity:0,y:50,scale:.94,duration:.55,ease:'expo.out'},S.t0+parseFloat(x.dataset.d));
+  });
+  el.querySelectorAll('[data-count]').forEach(x=>{
+    const [f,t,d,pre,suf,at]=x.dataset.count.split('|'); const o={v:+f}; x.textContent=pre+Math.round(+f).toLocaleString('en-US')+suf;
+    tl.to(o,{v:+t,duration:+d,ease:'power2.out',onUpdate:()=>{x.textContent=pre+Math.round(o.v).toLocaleString('en-US')+suf}},S.t0+parseFloat(at));
+  });
+  el.querySelectorAll('[data-sw]').forEach(x=>{
+    const [nt,d]=x.dataset.sw.split('|'); const old=x.textContent; const o={v:0};
+    tl.to(o,{v:1,duration:.01,onUpdate:()=>{x.textContent=o.v>=.5?nt:old}},S.t0+parseFloat(d));
+    tl.fromTo(x,{scale:1},{scale:1.35,duration:.18,yoyo:true,repeat:1,ease:'expo.out'},S.t0+parseFloat(d));
+  });
+  el.querySelectorAll('[data-swap]').forEach(x=>{
+    const [dy,d]=x.dataset.swap.split('|'); gsap.set(x,{y:+dy});
+    tl.to(x,{y:0,duration:.7,ease:'power2.inOut'},S.t0+parseFloat(d));
+  });
+  el.querySelectorAll('[data-pulse]').forEach(x=>{
+    const [d,n]=x.dataset.pulse.split('|');
+    tl.to(x,{scale:1.06,duration:.45,ease:'power2.inOut',yoyo:true,repeat:+n},S.t0+parseFloat(d));
+  });
+  el.querySelectorAll('.fl').forEach(x=>{tl.to(x,{y:'-=14',duration:Math.max(1,S.t1-S.t0-.8),ease:'none'},S.t0+.6)});
+  if(!S.last){tl.to(el,{autoAlpha:0,y:-50,duration:.25,ease:'expo.in'},S.t1-.25); tl.set(el,{y:0},S.t1+.01)}
+});
+tl.fromTo('#bgs',{x:-60},{x:60,duration:DUR,ease:'none'},0);
+tl.set({},{},DUR);
+window.__timelines[ID]=tl;
+</script></body></html>
